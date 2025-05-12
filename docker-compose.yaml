@@ -1,6 +1,8 @@
 services:
   notify-me:
-    build: .
+    build:
+      context: .
+      no_cache: true
     ports:
       - "8081:8080"
     environment:
