@@ -2,3 +2,6 @@ spring:
   jpa:
     show-sql: true
 environment: LOCAL
+api:
+  key:
+    value: 1234567890
