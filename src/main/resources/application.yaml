@@ -34,4 +34,4 @@ server:
 environment: PROD
 api:
   key:
-    value: ${X-API-KEY}
+    value: ${X_API_KEY}
