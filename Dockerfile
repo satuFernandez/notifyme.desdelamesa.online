@@ -11,11 +11,11 @@ RUN mvn package -DskipTests && \
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
-#RUN apk --no-cache add curl && \
-#    rm -rf /var/cache/apk/* && \
-#    addgroup -S notifyme && adduser -S notifyme -G notifyme
+RUN apk --no-cache add curl && \
+    rm -rf /var/cache/apk/* && \
+    addgroup -S notifyme && adduser -S notifyme -G notifyme
 
-RUN addgroup -S notifyme && adduser -S notifyme -G notifyme
+#RUN addgroup -S notifyme && adduser -S notifyme -G notifyme
 
 COPY --from=build /app/target/*.jar app.jar
 
