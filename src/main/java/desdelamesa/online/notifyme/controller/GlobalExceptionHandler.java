@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler(Exception.class)
-	public ResponseEntity<Void> handleAllExceptions(Exception ex) {
+	public ResponseEntity<Void> handleAllExceptions(final Exception ex) {
 		return ResponseEntity.status(444).build();
 	}
 }

@@ -32,3 +32,6 @@ server:
     whitelabel:
       enabled: false
 environment: PROD
+api:
+  key:
+    value: ${X-API-KEY:1234567890}
