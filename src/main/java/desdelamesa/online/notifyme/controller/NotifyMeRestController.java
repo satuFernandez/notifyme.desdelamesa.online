@@ -36,7 +36,7 @@ public class NotifyMeRestController {
 		this.addEmailToNotifyListUseCase.addEmailToNotifyList(email);
 	}
 
-	@GetMapping("/api/v1/getall/email")
+	@GetMapping("/api/v1/notifyme/email")
 	public ResponseEntity<Collection<String>> fetchAllEmails(@RequestHeader(name = "X-API-KEY") final String apiKey) {
 
 		if (!this.apiKey.equals(apiKey)) {
